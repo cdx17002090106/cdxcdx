@@ -15,7 +15,7 @@ import java.util.Properties;
 public class ResourcesGetServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          ServletContext servletContext = this.getServletContext();
-        InputStream resourceAsStream = servletContext.getResourceAsStream("/WEB-INF/classes/resources/itcast.properties");
+        InputStream resourceAsStream = servletContext.getResourceAsStream("/WEB-INF/classes/resources/itcase.properties");
         Properties properties=new Properties();
         properties.load(resourceAsStream);
         response.setContentType("text/html;charset=utf-8");
@@ -23,7 +23,7 @@ public class ResourcesGetServlet extends HttpServlet {
         printWriter.println("Company = "+properties.getProperty("Company"));
         printWriter.println("Address = "+properties.getProperty("Address"));
         printWriter.println("SingleName = "+properties.getProperty("SingleName"));
-       // printWriter.println("厉害");
+        printWriter.println("厉害");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

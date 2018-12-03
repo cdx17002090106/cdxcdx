@@ -1,7 +1,7 @@
 package com.wzy.servlet;
 
 
-import com.sun.deploy.net.HttpRequest;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +30,7 @@ public class RequestServlet extends HttpServlet {
         }
 
         if(name.equals("cdx")&&password.equals("123456")){
-            response.sendRedirect("redirect.html");
+            response.sendRedirect("shouye.html");
         }else{
             response.sendRedirect("error.html");
         }

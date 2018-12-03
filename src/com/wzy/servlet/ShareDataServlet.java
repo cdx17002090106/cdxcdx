@@ -13,9 +13,9 @@ import java.io.PrintWriter;
 public class ShareDataServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext servletContext=this.getServletContext();
-        servletContext.setAttribute("data","这是一门学不会的课");
+        servletContext.setAttribute("data","This is a saved data");
         PrintWriter printWriter = response.getWriter();
-        printWriter.println("data  okokok");
+        printWriter.write("data  okokok");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

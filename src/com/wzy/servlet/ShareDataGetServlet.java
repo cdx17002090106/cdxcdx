@@ -15,7 +15,7 @@ public class ShareDataGetServlet extends HttpServlet {
         ServletContext servletContext = this.getServletContext();
         String data =(String) servletContext.getAttribute("data");
         PrintWriter printWriter = response.getWriter();
-        printWriter.println("data="+data);
+        printWriter.write("data="+data);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
